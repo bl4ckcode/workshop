@@ -9,6 +9,23 @@ public class Carta {
 		this.valor = valor;
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+
+		Carta carta = (Carta) o;
+
+		return naipe == carta.naipe && valor == carta.valor;
+	}
+
+	@Override
+	public int hashCode() {
+		int result = naipe != null ? naipe.hashCode() : 0;
+		result = 31 * result + (valor != null ? valor.hashCode() : 0);
+		return result;
+	}
+
 	public Naipe getNaipe() {
 		return naipe;
 	}

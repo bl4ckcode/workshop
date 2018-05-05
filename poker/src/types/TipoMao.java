@@ -17,8 +17,4 @@ public enum TipoMao {
     TipoMao(int prioridade) {
         this.prioridade = prioridade;
     }
-
-    public int compareTo(TipoMao maoUm, TipoMao maoDois) {
-        return Integer.compare(maoUm.prioridade, maoDois.prioridade);
-    }
 }

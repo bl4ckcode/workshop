@@ -1,7 +1,6 @@
 package types;
 
 public enum Valor {
-	AS("A"),
 	DOIS("2"),
 	TRES("3"),
 	QUATRO("4"),
@@ -13,7 +12,8 @@ public enum Valor {
 	DEZ("10"),
 	VALETE("J"),
 	DAMA("Q"),
-	REI("K");
+	REI("K"),
+	AS("A");
 
 	String codigo;
 

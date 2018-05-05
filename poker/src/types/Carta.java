@@ -11,8 +11,10 @@ public class Carta {
 
 	@Override
 	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
+		if (this == o)
+			return true;
+		if (o == null || getClass() != o.getClass())
+			return false;
 
 		Carta carta = (Carta) o;
 
@@ -40,5 +42,14 @@ public class Carta {
 
 	public void setValor(Valor valor) {
 		this.valor = valor;
+	}
+
+	public int compareTo(Carta outra) {
+		int comparacaoValor = this.valor.compareTo(outra.valor);
+		if (comparacaoValor != 0) {
+			return comparacaoValor;
+		}
+
+		return this.naipe.compareTo(outra.naipe);
 	}
 }
